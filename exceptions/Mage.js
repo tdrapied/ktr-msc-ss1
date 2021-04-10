@@ -1,4 +1,5 @@
 const Character = require('./Character');
+const WeaponException = require('./WeaponException');
 
 /**
  * Class Mage
@@ -38,10 +39,13 @@ class Mage extends Character {
      * @param {string} weapon
      */
     attack(weapon) {
-        if (weapon === "magic" || weapon === "wand") {
-            console.log(`${this.__name}: Rrrrrrrrr....`);
-            console.log(`${this.__name}: Feel the power of my ${weapon}!`);
+        if (!weapon || weapon.length < 1) throw new WeaponException(`${this.__name}: I refuse to fight with my bare hands.`);
+        if (weapon !== "magic" && weapon !== "wand") {
+            throw new WeaponException(`${this.__name}: I don 't need this stupid ${weapon}! Don 't misjudge my powers!`);
         }
+
+        console.log(`${this.__name}: Rrrrrrrrr....`);
+        console.log(`${this.__name}: Feel the power of my ${weapon}!`);
     }
 
     moveRight() {

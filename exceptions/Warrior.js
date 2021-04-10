@@ -1,4 +1,5 @@
 const Character = require('./Character');
+const WeaponException = require('./WeaponException');
 
 /**
  * Class Warrior
@@ -38,10 +39,13 @@ class Warrior extends Character {
      * @param {string} weapon
      */
     attack(weapon) {
-        if (weapon === "hammer" || weapon === "sword") {
-            console.log(`${this.__name}: Rrrrrrrrr....`);
-            console.log(`${this.__name}: I'll crush you with my ${weapon}!`);
+        if (!weapon || weapon.length < 1) throw new WeaponException(`${this.__name}: I refuse to fight with my bare hands.`);
+        if (weapon !== "hammer" && weapon !== "sword") {
+            throw new WeaponException(`${this.__name}: A ${weapon}?? What should I do with this?!`);
         }
+
+        console.log(`${this.__name}: Rrrrrrrrr....`);
+        console.log(`${this.__name}: I'll crush you with my ${weapon}!`);
     }
 
     moveRight() {

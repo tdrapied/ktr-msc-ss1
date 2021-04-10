@@ -1,5 +1,6 @@
-const Warrior = require('./Warrior');
-const Mage = require('./Mage');
+const Warrior = require('./exceptions/Warrior');
+const Mage = require('./exceptions/Mage');
+const WeaponException = require('./exceptions/WeaponException');
 
 /**
  * @type {Warrior}
@@ -11,11 +12,14 @@ const warrior = new Warrior("Jean-Luc");
  */
 const mage = new Mage("Robert");
 
-warrior.moveRight();
-warrior.moveLeft();
-warrior.moveBack();
-warrior.moveForward();
-mage.moveRight();
-mage.moveLeft();
-mage.moveBack();
-mage.moveForward();
+warrior.tryToAttack("screwdriver");
+mage.tryToAttack("hammer");
+warrior.tryToAttack("hammer");
+
+try {
+    mage.attack("");
+} catch (e) {
+    if (e instanceof WeaponException) {
+        console.log(e.getMessage());
+    }
+}

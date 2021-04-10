@@ -1,4 +1,5 @@
 const Movable = require('./Movable');
+const WeaponException = require('./WeaponException');
 
 /**
  * Abstract Class Character
@@ -94,6 +95,19 @@ class Character extends Movable {
      */
     attack(content) {
         console.log(`${this.__name}: Rrrrrrrrr....`);
+    }
+
+    /**
+     * @param {string} weapon
+     */
+    tryToAttack(weapon) {
+        try {
+            this.attack(weapon);
+        } catch (e) {
+            if (e instanceof WeaponException) {
+                console.log(e.getMessage());
+            }
+        }
     }
 
     unsheathe() {
