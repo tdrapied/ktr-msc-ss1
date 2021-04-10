@@ -44,6 +44,22 @@ class Mage extends Character {
         }
     }
 
+    moveRight() {
+        console.log(`${this.__name}: moves right furtively.`);
+    }
+
+    moveLeft() {
+        console.log(`${this.__name}: moves left furtively.`);
+    }
+
+    moveBack() {
+        console.log(`${this.__name}: moves back furtively.`);
+    }
+
+    moveForward() {
+        console.log(`${this.__name}: moves forward furtively.`);
+    }
+
 }
 
 module.exports = Mage;

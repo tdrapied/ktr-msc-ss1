@@ -2,7 +2,7 @@
 
 I chose nodeJs for this exercise because it's my preferred language despite although it has no type.
 
-## STEP 03
+## STEP 04
 
 To run nodeJs code :
 

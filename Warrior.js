@@ -44,6 +44,22 @@ class Warrior extends Character {
         }
     }
 
+    moveRight() {
+        console.log(`${this.__name}: moves right like a bad boy.`);
+    }
+
+    moveLeft() {
+        console.log(`${this.__name}: moves left like a bad boy.`);
+    }
+
+    moveBack() {
+        console.log(`${this.__name}: moves back like a bad boy.`);
+    }
+
+    moveForward() {
+        console.log(`${this.__name}: moves forward like a bad boy.`);
+    }
+
 }
 
 module.exports = Warrior;
