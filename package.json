@@ -1,7 +1,7 @@
 {
   "name": "ktr-msc-ss1",
   "version": "1.0.0",
-  "description": "Exercise - STEP 02",
+  "description": "Exercise - STEP 03",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ."

@@ -1,13 +1,17 @@
+const Movable = require('./Movable');
+
 /**
  * Abstract Class Character
  */
-class Character {
+class Character extends Movable {
 
     /**
      * @param {string} name
      * @param {string} RPGClass
      */
     constructor(name, RPGClass) {
+        super();
+
         if (this.constructor == Character) {
             throw new Error(`The ${this.constructor.name} abstract class may not be instantiated.`);
         }
@@ -90,6 +94,22 @@ class Character {
      */
     attack(content) {
         console.log(`${this.__name}: Rrrrrrrrr....`);
+    }
+
+    moveRight() {
+        console.log(`${this.__name}: moves right`);
+    }
+
+    moveLeft() {
+        console.log(`${this.__name}: moves left`);
+    }
+
+    moveBack() {
+        console.log(`${this.__name}: moves back`);
+    }
+
+    moveForward() {
+        console.log(`${this.__name}: moves forward`);
     }
 
 }
