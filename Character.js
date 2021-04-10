@@ -96,6 +96,10 @@ class Character extends Movable {
         console.log(`${this.__name}: Rrrrrrrrr....`);
     }
 
+    unsheathe() {
+        console.log(`${this.__name}: unsheathes his weapon.`);
+    }
+
     moveRight() {
         console.log(`${this.__name}: moves right`);
     }
