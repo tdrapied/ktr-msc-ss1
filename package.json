@@ -1,0 +1,10 @@
+{
+  "name": "ktr-msc-ss1",
+  "version": "1.0.0",
+  "description": "Exercise - STEP 01",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "author": "Thibault <t.drapied@gmail.com"
+}
