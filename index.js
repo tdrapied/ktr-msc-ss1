@@ -1,15 +1,15 @@
-const Character = require('./Character');
+const Warrior = require('./Warrior');
+const Mage = require('./Mage');
 
 /**
- * @type {Character}
+ * @type {Warrior}
  */
-const perso = new Character("Jean-Luc");
+const warrior = new Warrior("Jean-Luc");
 
-console.log(perso.getName());
-console.log(perso.getLife());
-console.log(perso.getAgility());
-console.log(perso.getStrength());
-console.log(perso.getWit());
-console.log(perso.getRPGClass());
+/**
+ * @type {Mage}
+ */
+const mage = new Mage("Robert");
 
-perso.attack("my weapon");
+warrior.attack("hammer");
+mage.attack("magic");

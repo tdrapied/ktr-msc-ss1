@@ -8,11 +8,9 @@ class Character {
      * @param {string} RPGClass
      */
     constructor(name, RPGClass) {
-        // Uncomment this code to apply the abstract class
-        //
-        // if (this.constructor == Character) {
-        //     throw new Error(`The ${this.constructor.name} abstract class may not be instantiated.`);
-        // }
+        if (this.constructor == Character) {
+            throw new Error(`The ${this.constructor.name} abstract class may not be instantiated.`);
+        }
 
         /**
          * @type {string}
@@ -20,11 +18,9 @@ class Character {
         this.__name = name;
 
         /**
-         * If RPGClass is not defined ; the variable get constructor name
-         *
          * @type {string}
          */
-        this.__RPGClass = RPGClass || this.constructor.name;
+        this.__RPGClass = RPGClass;
 
         /**
          * @type {number}
